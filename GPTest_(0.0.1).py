@@ -448,12 +448,12 @@ def close_result_window():
             return explanation
 
         def explain_import(self, line):
-            explanation = "📦 Импорт модуля:\n"
+            explanation = "📦 Импорт библиотеки:\n"
 
             match = re.match(r'import\s+(.+)', line)
             if match:
                 module = match.group(1)
-                explanation += f"• Модуль: {module}\n"
+                explanation += f"• Библиотека: {module}\n"
                 explanation += "• Добавляет функциональность из внешнего модуля\n"
                 explanation += f"• Теперь можно использовать: {module}.функция()\n"
 
@@ -650,13 +650,13 @@ def gene():
 
                         if safety_level == 2:
                             high_risk_count += 1
-                            color_indicator = "🔴 Высокий риск"
+                            color_indicator = "🔴 Системная библиотека"
                         elif safety_level == 1:
                             low_risk_count += 1
-                            color_indicator = "🟢 Низкий риск"
+                            color_indicator = "🟢 Несистемная библиотека"
                         else:
                             unknown_count += 1
-                            color_indicator = "🟡 Неизвестный риск"
+                            color_indicator = "🟡 Неизвестная библиотека"
 
                         link_text = f"{color_indicator} | {module}: {module_links.get(module, 'Ссылка не найдена')}"
                         links_listbox.insert(END, link_text)
@@ -664,7 +664,7 @@ def gene():
                         links_listbox.insert(END,
                                              f"🟡 Неизвестный риск | {module}: {module_links.get(module, 'Ссылка не найдена')}")
 
-                stats_text = f"Высокий риск: {high_risk_count} | Низкий риск: {low_risk_count} | Неизвестные: {unknown_count}"
+                stats_text = f"Системных библиотек: {high_risk_count} | Несистемных библиотек: {low_risk_count} | Неизвестных библиотек: {unknown_count}"
                 stats_label = Label(root, text=stats_text)
                 stats_label.place(x=10, y=560, width=780, height=20)
 
@@ -761,4 +761,3 @@ import tkinter
 text.insert("1.0", example_code)
 
 w.mainloop()
-
