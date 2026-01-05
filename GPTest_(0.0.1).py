@@ -706,7 +706,6 @@ def inetprit():
     root = Tk()
     root.title("Interpreter settings")
     root.geometry("400x200")
-    root.iconbitmap("Sun.ico")
     root.resizable(False, False)
     a = Label(root, text=f"Выбранный интерпретатор: \n{ses}")
     a.place(x=0, y=0, width=160, height=30)
