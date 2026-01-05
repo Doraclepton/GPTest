@@ -108,7 +108,6 @@ def close_result_window():
     report_window.title("GPTest - Полный отчет")
     report_window.geometry("900x700")
     report_window.resizable(False, False)
-    report_window.iconbitmap("Sun.ico")
 
     class SmartPythonTranslator:
         def __init__(self, root):
@@ -555,7 +554,6 @@ def gene():
             root = Tk()
             root.title("GPTest - Result")
             root.geometry("800x600")
-            root.iconbitmap("Sun.ico")
             root.resizable(False, False)
             result_window = root
 
@@ -697,7 +695,6 @@ w = Tk()
 w.title("GPTest")
 w.geometry("600x505")
 w.resizable(False, False)
-w.iconbitmap("Sun.ico")
 
 def git():
     webbrowser.open('https://github.com/Doraclepton/GPTest')
