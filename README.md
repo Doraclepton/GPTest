@@ -11,4 +11,5 @@ Processing mode - the mode of scanning user code for the presence of libraries.
 Full processing mode - the mode of processing user code and displaying information to the user about possible actions of the code; 
 
 
-To create comments, simply use the hash symbol (#)
+To create comments, simply use the hash symbol (#) \
+The program does not handle libraries well in full processing.
