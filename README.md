@@ -16,6 +16,6 @@ The program does not handle libraries well in full processing.
 
 # GPTest - version 0.0.2
 1)Fixes for syntax errors in incomplete parsing \
-2)Adding official Doraclepton/Dora images to the code \
+2)Adding official Doraclepton/Dora images to the code 
 
 In future updates I will try to add the function of handling the 2nd programming language!
